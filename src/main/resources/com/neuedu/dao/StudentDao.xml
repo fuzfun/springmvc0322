@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.dao.StudentDao">
+	<resultMap type="Student" id="studentMap">
+		<result property="bId" column="b_id"/>
+	</resultMap>
+	<select id="getStudents" resultMap="studentMap">
+		select id,name,b_id,gerden from student
+	</select>
+</mapper>
